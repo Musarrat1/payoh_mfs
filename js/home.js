@@ -10,8 +10,14 @@ document.getElementById('btn-add-money').addEventListener('click', function(even
         const balance = document.getElementById('account-balance').innerText;
         console.log(balance);
         //add money
-        const newBalance = balance + addMoneyInput;
+        const addMoney = parseFloat(addMoneyInput);
+        const saveBalance = parseFloat(balance);
 
+        const newBalance = addMoney + saveBalance;
+        console.log(newBalance);
+        //update the element
+
+        document.getElementById('account-balance').innerText = newBalance;
     }
     else{
         alert("failed to add money");
